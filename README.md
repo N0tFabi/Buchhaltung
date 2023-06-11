@@ -32,43 +32,43 @@ buchungssatz.SetDatum(<Jahr : int>, <Monat : Monat>, <Tag : int>);
 Bilanz bilanz = new Bilanz();
 ```
 
-Eröffnungsbilanzkonto (EBK) hinzufügen:
+#### Eröffnungsbilanzkonto (EBK) hinzufügen:
 ```csharp
 bilanz.AddKonto(ebk);
 ```
 
-Bilanz eröffnen (nur nötig, wenn man EBK hinzugefügt hat):
+#### Bilanz eröffnen (nur nötig, wenn man EBK hinzugefügt hat):
 ```csharp
 bilanz.Open();
 ```
 
-Buchungssatz zur Bilanz hinzufügen:
+#### Buchungssatz zur Bilanz hinzufügen:
 ```csharp
 bilanz.AddBuchung(<Buchungssatz : Buchungssatz>);
 ```
 
-Steuern umbuchen (USt und VSt zu UST-Zahllast verbuchen):
+#### Steuern umbuchen (USt und VSt zu UST-Zahllast verbuchen):
 ```csharp
 bilanz.SteuernUmbuchen(<Datum : string>);
 ```
 
-Erfolgskonten mit Warenvorrat laut Inventur abschließen:
+#### Erfolgskonten mit Warenvorrat laut Inventur abschließen:
 ```csharp
 bilanz.ErfolgsKontenAbschlieszen(<Warenvorrat : decimal>);
 ```
 
-Alle Konten, auf denen etwas verbucht wurde, ausgeben:
+#### Alle Konten, auf denen etwas verbucht wurde, ausgeben:
 ```csharp
 bilanz.Print();
 ```
 
-Schlussbilanzkonto (SBK) von bestimmten Jahr erstellen und ausgeben:
+#### Schlussbilanzkonto (SBK) von bestimmten Jahr erstellen und ausgeben:
 ```csharp
 bilanz.CreateSchlussbilanz(<Jahr : int>);
 bilanz.PrintSchlussbilanz();
 ```
 
-Bilanz exportieren / importieren:
+#### Bilanz exportieren / importieren:
 ```csharp
 bilanz.ExportData(<filePath : string>);
 Bilanz importBilanz = new Bilanz().ImportData(<filePath : string>);
