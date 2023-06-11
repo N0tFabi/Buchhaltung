@@ -4,19 +4,10 @@
 
 <h1 align="center">Buchhaltung</h1>
 <p align="center">
-  <a href="https://github.com/AstraaDev/Discord-All-Tools-In-One/blob/main/LICENSE" onclick="copyText('notfabi')" title="Copy to Clipboard">
-    <img src="https://img.shields.io/badge/License-MIT-important">
+  <a title="@notfabi">
+    <img src="[https://img.shields.io/badge/License-MIT-important](https://img.shields.io/badge/Discord-%40notfabi-%235464f4)">
   </a>
 </p>
-
-<script>
-function copyText(text) {
-  navigator.clipboard.writeText(text)
-    .catch(err => {
-      console.error("Failed to copy text: ", err);
-    });
-}
-</script>
 
 If you're too lazy to do it manually
 
