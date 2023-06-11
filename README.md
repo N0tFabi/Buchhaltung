@@ -3,6 +3,21 @@
 </p>
 
 <h1 align="center">Buchhaltung</h1>
+<p align="center">
+  <a href="https://github.com/AstraaDev/Discord-All-Tools-In-One/blob/main/LICENSE" onclick="copyText('notfabi')" title="Copy to Clipboard">
+    <img src="https://img.shields.io/badge/License-MIT-important">
+  </a>
+</p>
+
+<script>
+function copyText(text) {
+  navigator.clipboard.writeText(text)
+    .catch(err => {
+      console.error("Failed to copy text: ", err);
+    });
+}
+</script>
+
 If you're too lazy to do it manually
 
 This is a program in c# with which you can do bookkeeping.
