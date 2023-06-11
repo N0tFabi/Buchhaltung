@@ -4,7 +4,7 @@
 
 <h1 align="center">Buchhaltung</h1>
 <p align="center">
-  <img src="[https://img.shields.io/badge/Discord-%40notfabi-%235464f4]">
+  <img src="https://img.shields.io/badge/Discord-%40notfabi-%235464f4">
 </p>
 
 If you're too lazy to do it manually
