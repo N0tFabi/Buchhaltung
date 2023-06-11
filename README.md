@@ -5,7 +5,7 @@
 <h1 align="center">Buchhaltung</h1>
 <p align="center">
   <a title="@notfabi">
-    <img src="[https://img.shields.io/badge/License-MIT-important](https://img.shields.io/badge/Discord-%40notfabi-%235464f4)">
+    <img src="[https://img.shields.io/badge/Discord-%40notfabi-%235464f4]">
   </a>
 </p>
 
