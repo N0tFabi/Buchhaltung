@@ -1,0 +1,45 @@
+D:\Visul Studo repos\NewBuchhaltung\Main\bin\Debug\net6.0\Main.exe
+D:\Visul Studo repos\NewBuchhaltung\Main\bin\Debug\net6.0\Main.deps.json
+D:\Visul Studo repos\NewBuchhaltung\Main\bin\Debug\net6.0\Main.runtimeconfig.json
+D:\Visul Studo repos\NewBuchhaltung\Main\bin\Debug\net6.0\Main.dll
+D:\Visul Studo repos\NewBuchhaltung\Main\bin\Debug\net6.0\Main.pdb
+D:\Visul Studo repos\NewBuchhaltung\Main\obj\Debug\net6.0\Main.csproj.AssemblyReference.cache
+D:\Visul Studo repos\NewBuchhaltung\Main\obj\Debug\net6.0\Main.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visul Studo repos\NewBuchhaltung\Main\obj\Debug\net6.0\Main.AssemblyInfoInputs.cache
+D:\Visul Studo repos\NewBuchhaltung\Main\obj\Debug\net6.0\Main.AssemblyInfo.cs
+D:\Visul Studo repos\NewBuchhaltung\Main\obj\Debug\net6.0\Main.csproj.CoreCompileInputs.cache
+D:\Visul Studo repos\NewBuchhaltung\Main\obj\Debug\net6.0\Main.dll
+D:\Visul Studo repos\NewBuchhaltung\Main\obj\Debug\net6.0\refint\Main.dll
+D:\Visul Studo repos\NewBuchhaltung\Main\obj\Debug\net6.0\Main.pdb
+D:\Visul Studo repos\NewBuchhaltung\Main\obj\Debug\net6.0\Main.genruntimeconfig.cache
+D:\Visul Studo repos\NewBuchhaltung\Main\obj\Debug\net6.0\ref\Main.dll
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\bin\Debug\net6.0\Main.exe
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\bin\Debug\net6.0\Main.deps.json
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\bin\Debug\net6.0\Main.runtimeconfig.json
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\bin\Debug\net6.0\Main.dll
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\bin\Debug\net6.0\Main.pdb
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\obj\Debug\net6.0\Main.csproj.AssemblyReference.cache
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\obj\Debug\net6.0\Main.GeneratedMSBuildEditorConfig.editorconfig
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\obj\Debug\net6.0\Main.AssemblyInfoInputs.cache
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\obj\Debug\net6.0\Main.AssemblyInfo.cs
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\obj\Debug\net6.0\Main.csproj.CoreCompileInputs.cache
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\obj\Debug\net6.0\Main.dll
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\obj\Debug\net6.0\refint\Main.dll
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\obj\Debug\net6.0\Main.pdb
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\obj\Debug\net6.0\Main.genruntimeconfig.cache
+U:\POSE\000_selber\NewBuchhaltung\NewBuchhaltung\Main\obj\Debug\net6.0\ref\Main.dll
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\bin\Debug\net6.0\Main.exe
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\bin\Debug\net6.0\Main.deps.json
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\bin\Debug\net6.0\Main.runtimeconfig.json
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\bin\Debug\net6.0\Main.dll
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\bin\Debug\net6.0\Main.pdb
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\obj\Debug\net6.0\Main.csproj.AssemblyReference.cache
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\obj\Debug\net6.0\Main.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\obj\Debug\net6.0\Main.AssemblyInfoInputs.cache
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\obj\Debug\net6.0\Main.AssemblyInfo.cs
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\obj\Debug\net6.0\Main.csproj.CoreCompileInputs.cache
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\obj\Debug\net6.0\Main.dll
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\obj\Debug\net6.0\refint\Main.dll
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\obj\Debug\net6.0\Main.pdb
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\obj\Debug\net6.0\Main.genruntimeconfig.cache
+D:\Visul Studo repos\BUCHHALTUNG_PROGRESS\NewBuchhaltung\Main\obj\Debug\net6.0\ref\Main.dll
