@@ -1,4 +1,8 @@
-# Buchhaltung
+<p align="center">
+  <img src="https://i.discord.fr/PSS.png">
+</p>
+
+<h1 align="center">Buchhaltung</h1>
 If you're too lazy to do it manually
 
 This is a program in c# with which you can do bookkeeping.
