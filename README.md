@@ -27,7 +27,7 @@ buchungssatz.SetDatum(<Jahr : int>, <Monat : Monat>, <Tag : int>);
 ```
 
 ### Bilanz
-Neue Bilanz erstellen:
+#### Neue Bilanz erstellen:
 ```csharp
 Bilanz bilanz = new Bilanz();
 ```
@@ -66,4 +66,10 @@ Schlussbilanzkonto (SBK) von bestimmten Jahr erstellen und ausgeben:
 ```csharp
 bilanz.CreateSchlussbilanz(<Jahr : int>);
 bilanz.PrintSchlussbilanz();
+```
+
+Bilanz exportieren / importieren:
+```csharp
+bilanz.ExportData(<filePath : string>);
+Bilanz importBilanz = new Bilanz().ImportData(<filePath : string>);
 ```
