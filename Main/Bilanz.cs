@@ -392,10 +392,22 @@ namespace Main
                         habenSum += konten[i].HabenWerte[j];
                     }
 
-                    string saldoSoll = String.Format("{0," + ((sollSum > habenSum) ? sollSum.ToString().Length : (sollSum + saldo).ToString().Length) + "}", saldo);
-                    string saldoHaben = String.Format("{0," + ((habenSum > sollSum) ? habenSum.ToString().Length : (habenSum + saldo).ToString().Length) + "}", saldo);
+                    string saldoSoll = "";
+                    string saldoHaben = "";
 
-                    Console.WriteLine($"Summe: {((sollSum > habenSum) ? sollSum : sollSum + saldo)} EUR | {((habenSum > sollSum) ? habenSum : habenSum + saldo)} EUR");
+                    if (Math.Abs(sollSum) < Math.Abs(habenSum))
+                    {
+                        int sollLength = Math.Abs(sollSum).ToString().Length;
+                        saldoSoll = String.Format("{0," + sollLength + "}", Math.Abs(saldo));
+                    }
+                    
+                    if (Math.Abs(sollSum) > Math.Abs(habenSum))
+                    {
+                        int habenLength = Math.Abs(sollSum).ToString().Length;
+                        saldoHaben = String.Format("{0," + habenLength + "}", Math.Abs(saldo));
+                    }
+
+                    Console.WriteLine($"Summe: {Math.Abs(sollSum):f2} EUR | {Math.Abs(habenSum):f2} EUR");
                     Console.WriteLine($"Saldo: {((saldo > 0) ? $"{saldoSoll} EUR" : "")} | {((saldo < 0) ? $"{saldoHaben} EUR" : "")}");
 
                     return;
