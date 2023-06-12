@@ -392,7 +392,11 @@ namespace Main
                         habenSum += konten[i].HabenWerte[j];
                     }
 
-                    Console.WriteLine($"Summe: {sollSum} EUR | {habenSum} EUR");
+                    string saldoSoll = String.Format("{0," + ((sollSum > habenSum) ? sollSum.ToString().Length : (sollSum + saldo).ToString().Length) + "}", saldo);
+                    string saldoHaben = String.Format("{0," + ((habenSum > sollSum) ? habenSum.ToString().Length : (habenSum + saldo).ToString().Length) + "}", saldo);
+
+                    Console.WriteLine($"Summe: {((sollSum > habenSum) ? sollSum : sollSum + saldo)} EUR | {((habenSum > sollSum) ? habenSum : habenSum + saldo)} EUR");
+                    Console.WriteLine($"Saldo: {((saldo > 0) ? $"{saldoSoll} EUR" : "")} | {((saldo < 0) ? $"{saldoHaben} EUR" : "")}");
 
                     return;
                 }
