@@ -70,24 +70,6 @@ namespace Main
 
             stopwatch.Stop();
             Console.WriteLine("\nElapsed seconds: " + stopwatch.ElapsedMilliseconds / 1000.0);
-
-            Console.WriteLine("Press Enter to export bilanz..");
-            Console.ReadLine();
-
-            stopwatch.Restart();
-
-            bilanz.ExportData(@"..\..\..\exports\Bilanz.bin");
-
-            stopwatch.Stop();
-            Console.WriteLine("Export took " + stopwatch.ElapsedMilliseconds / 1000.0 + " seconds.");
-
-            Console.WriteLine("Loading Bilanz...");
-            stopwatch.Restart();
-
-            Bilanz aB = Bilanz.ImportData(@"..\..\..\exports\Bilanz.bin");
-
-            stopwatch.Stop();
-            Console.WriteLine("Import took " + stopwatch.ElapsedMilliseconds / 1000.0 + " seconds.");
         }
     }
 }
