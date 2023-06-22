@@ -499,31 +499,6 @@ namespace Main
             }
         }
 
-        public void ExportData(string filepath)
-        {
-            string jsonData = JsonSerializer.Serialize(this);
-
-            using (StreamWriter writer = new StreamWriter(filepath))
-            {
-                writer.Write(jsonData);
-            }
-
-            Console.WriteLine($"Export completed. Total bytes written: {new FileInfo(filepath).Length.ToString("0#,0")}");
-        }
-
-        public static Bilanz ImportData(string filepath)
-        {
-            string jsonData;
-
-            using (StreamReader reader = new StreamReader(filepath))
-            {
-                jsonData = reader.ReadToEnd();
-            }
-
-            Bilanz? bilanz = JsonSerializer.Deserialize<Bilanz>(jsonData);
-            return bilanz!;
-        }
-
         public void AddKonto(Konto konto)
         {
             int kontoNummer = konto.GetKontoNummer();
