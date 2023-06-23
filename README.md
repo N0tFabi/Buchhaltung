@@ -76,8 +76,7 @@ bilanz.CreateSchlussbilanz(<Jahr : int>);
 bilanz.PrintSchlussbilanz();
 ```
 
-#### Bilanz exportieren / importieren:
+#### Bilanz exportieren:
 ```csharp
-bilanz.ExportData(<filePath : string>);
-Bilanz importBilanz = new Bilanz().ImportData(<filePath : string>);
+bilanz.WriteToExcelFile(<string : filePath>);
 ```
