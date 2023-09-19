@@ -11,6 +11,8 @@ If you're too lazy to do it manually
 
 This is a program in c# with which you can do bookkeeping.
 
+Ans also I'll never write a documentation or Unit Tests for this, thanks for asking.
+
 ## Usage
 
 ### Eröffnungsbilanzkonto (EBK)

@@ -17,14 +17,14 @@ namespace Main
     [Serializable]
     public class Bilanz : Kontenplan
     {
-        private readonly string s_aktivKontenColor = "#fc94f4";
-        private readonly string s_passivKontenColor = "#fcc404";
-        private readonly string s_ertragsKontenColor = "#94d454";
-        private readonly string s_aufwandsKontenColor = "#04b4f4";
+        private readonly string s_aktivKontenColor                   = "#fc94f4";
+        private readonly string s_passivKontenColor                  = "#fcc404";
+        private readonly string s_ertragsKontenColor                 = "#94d454";
+        private readonly string s_aufwandsKontenColor                = "#04b4f4";
         private readonly string s_eroeffnungsUndAbschlussKontenColor = "#fcccac";
-        private readonly string s_GuvKontenColor = "#fcfc04";
+        private readonly string s_GuvKontenColor                     = "#fcfc04";
 
-        private readonly string DEFAULT_SHEET_NAME = "Hauptbuchung";
+        private readonly string DEFAULT_SHEET_NAME                   = "Hauptbuchung";
 
         private readonly List<Buchungssatz> buchungen;
 
@@ -35,11 +35,17 @@ namespace Main
 
         private decimal anfangsbestand = 0;
         private int year = -1;
+        private const int TOTAL_EXCEL_COLUMNS = 3; // dont be a dumbass and change its value to be over 5
         // Anfangsbestand POSITIV -> HABEN in ebk
         // Anfangsbestand NEGATIV -> SOLL in ebk
 
         public Bilanz()
         {
+            if (TOTAL_EXCEL_COLUMNS > 5 || TOTAL_EXCEL_COLUMNS < 1)
+            {
+                throw new Exception("dumbass");
+            }
+
             buchungen = new List<Buchungssatz>();
 
             konten = new Konto[Length()];
@@ -70,6 +76,40 @@ namespace Main
             buchungen.Add(buchung);
 
             AddToBilanz(buchung);
+        }
+
+        public void RemoveBuchung(Buchungssatz buchung)
+        {
+            decimal[] sollWerte = buchung.GetSollWerte();
+            decimal[] habenWerte = buchung.GetHabenWerte();
+
+            int[] sollKonten = buchung.GetSollKonten();
+            int[] habenKonten = buchung.GetHabenKonten();
+
+            StringBuilder sb = new();
+
+            for(int i = 0; i < habenKonten.Length; i++)
+            {
+                sb.Append($"{habenKonten[i]} {habenWerte[i]} EUR ");
+            }
+
+            sb.Append("/ ");
+
+            for(int i = 0; i < sollKonten.Length; i++)
+            {
+                sb.Append($"{sollKonten[i]} {sollWerte[i]} EUR ");
+            }
+
+            Buchungssatz result = new(sb.ToString().Trim());
+
+            string[] dateParts = buchung.GetDate().Split(".");
+            int day = Convert.ToInt32(dateParts[0]), year = Convert.ToInt32(dateParts[2]);
+            Monat month = (Monat) Convert.ToInt32(dateParts[1]);
+
+            result.SetDatum(year, month, day);
+
+            buchungen.Add(result);
+            AddToBilanz(result);
         }
 
         private void AddToBilanz(Buchungssatz buchung)
@@ -580,7 +620,7 @@ namespace Main
 
         public void WriteToExcelFile(string filepath)
         {
-            const int TOTAL_COLUMNS = 3;
+            const int TOTAL_COLUMNS = TOTAL_EXCEL_COLUMNS;
             const char START_VERTIKAL_REIHE = 'A';
 
             const double SPALTEN_BREITE = 14;
@@ -728,7 +768,21 @@ namespace Main
                                 gegenkontenMsg += ", ";
                         }
 
-                        sheet.SetValue(horizontalReihe + 2, vertikalReihe - 'A' + 1, datum);
+                        if (string.IsNullOrEmpty(datum))
+                        {
+                            if (gegenkonten.Contains(SearchFor("(EBK)")))
+                            {
+                                datum = $"31.12.{this.year}";
+                            }
+                            else if (exportKonten[i].GetKontoNummer() == SearchFor("EBK"))
+                            {
+                                datum = $"31.12.{this.year}";
+                            }
+                        }
+
+                        // Console.WriteLine(datum);
+                        // sheet.SetValue(horizontalReihe + 2, vertikalReihe - 'A' + 1, datum);
+                        sheet.Range[horizontalReihe + 2, vertikalReihe - 'A' + 1].Text = datum;
                         sheet.SetValue(horizontalReihe + 2, vertikalReihe - 'A' +  2, gegenkontenMsg);
 
                         sheet.SetNumber(horizontalReihe + 2, vertikalReihe - 'A' + 1 + (isSoll ? 2 : 3), (double)wert);
@@ -772,7 +826,15 @@ namespace Main
 
                 vertikalReihe += (char)5;
 
-                if ((i + 1) % 3 == 0)
+                //sheet.SetColumnWidth((int)(vertikalReihe - 'A'), 2);
+                if ((vertikalReihe - 'A' - 5) > 0)
+                {
+                    //sheet.Columns[vertikalReihe - 'A' - 5].ColumnWidth = 2;
+                    sheet.SetColumnWidth(vertikalReihe - 'A' - 5, 2);
+                }
+                // i give up :skull:
+
+                if ((i + 1) % TOTAL_COLUMNS == 0)
                 {
                     int horizontalReiheInc = Math.Max(exportKonten[i].GetEintraege() + 2, Math.Max(exportKonten[i - 1].GetEintraege() + 2, exportKonten[i - 2].GetEintraege() + 2));
 

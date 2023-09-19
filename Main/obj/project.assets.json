@@ -495,11 +495,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kahlh\\OneDrive\\Desktop\\Alles_Moegliche\\buchhaltung\\NewBuchhaltung\\Main\\Main.csproj",
+      "projectUniqueName": "C:\\Users\\kahlh\\Downloads\\repos\\repos\\Buchhaltung\\Main\\Main.csproj",
       "projectName": "Main",
-      "projectPath": "C:\\Users\\kahlh\\OneDrive\\Desktop\\Alles_Moegliche\\buchhaltung\\NewBuchhaltung\\Main\\Main.csproj",
+      "projectPath": "C:\\Users\\kahlh\\Downloads\\repos\\repos\\Buchhaltung\\Main\\Main.csproj",
       "packagesPath": "C:\\Users\\kahlh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kahlh\\OneDrive\\Desktop\\Alles_Moegliche\\buchhaltung\\NewBuchhaltung\\Main\\obj\\",
+      "outputPath": "C:\\Users\\kahlh\\Downloads\\repos\\repos\\Buchhaltung\\Main\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -514,6 +514,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

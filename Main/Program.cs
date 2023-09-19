@@ -8,9 +8,9 @@ using Spire.Xls.Core;
 
 namespace Main
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Kontenplan kontenplan = new();
 
@@ -57,14 +57,21 @@ namespace Main
             bilanz.AddBuchung(d);
             bilanz.AddBuchung(e);
 
-            bilanz.ErfolgskontenAbschlieszen(2023, 73_107m);
+            bilanz.ErfolgskontenAbschlieszen(2020, 73_107m);
 
-            bilanz.SteuernUmbuchen("31.05.2023");
-            bilanz.ErfolgskontenAbschlieszen(2023);
+            bilanz.CreateSchlussbilanz(2020);
+            //bilanz.Print();
+            //bilanz.PrintKontonummer(kontenplan.SearchFor("GuV"));
 
-            bilanz.CreateSchlussbilanz(2023);
-            bilanz.Print();
-            bilanz.PrintKontonummer(kontenplan.SearchFor("GuV"));
+            //Buchungssatz buchungssatz = new("3300 5000 EUR / 2800 5000 EUR");
+            //buchungssatz.SetDatum(2020, Monat.January, 03);
+            //bilanz.AddBuchung(buchungssatz);
+
+            bilanz.SteuernUmbuchen("15.03.2020");
+            bilanz.ErfolgskontenAbschlieszen(2020);
+
+            bilanz.ErfolgskontenAbschlieszen(2020);
+            bilanz.CreateSchlussbilanz(2020);
 
             bilanz.WriteToExcelFile("bilanz.xlsx");
 
